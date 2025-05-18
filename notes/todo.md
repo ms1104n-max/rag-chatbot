@@ -1,0 +1,64 @@
+# Todo
+- Support PDF in the RAG pipeline:
+  - [pdf-parsing.md](pdf-parsing.md)
+- Explore Jina AI Embeddings, Rerankers amd Small LMs:
+  - https://huggingface.co/jinaai
+  - https://huggingface.co/jinaai/jina-embeddings-v4 (Multimodal)
+- `Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled`: a `27B` parameter reasoning specialist. This model was distilled from Claude's reasoning patterns into Qwen's architecture, creating a powerful chain-of-thought thinker that's surprisingly accessible.
+  - https://huggingface.co/Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled
+- Chunking:
+  - [Introducing Contextual Retrieval](https://www.anthropic.com/news/contextual-retrieval)
+  - [Chunking for RAG: Stop Breaking Your Documents Into Meaningless Pieces](https://www.youtube.com/watch?v=trG5pjChAkM)
+  - [Late Chunking: Balancing Precision and Cost in Long Context Retrieval](https://weaviate.io/blog/late-chunking)
+  - [Late Chunking of Short Chunks in Long-Context Embedding Models](https://github.com/jina-ai/late-chunking)
+- Reranking:
+  - https://github.com/PrithivirajDamodaran/FlashRank
+  - https://github.com/AnswerDotAI/rerankers
+  - https://huggingface.co/jinaai/jina-reranker-m0-GGUF
+- Test Flash attention:
+  - https://pypi.org/project/flash-attn/
+  - https://github.com/ggerganov/llama.cpp/pull/5021
+- https://github.com/JuliusBrussee/caveman/blob/main/caveman/SKILL.md
+- LLM Wiki (from karpathy): https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+- Experiment Agentic Patterns:
+  - https://weaviate.io/blog/what-is-agentic-rag
+  - https://github.com/neural-maze/agentic_patterns
+  - https://www.youtube.com/watch?v=ApoDzZP8_ck
+  - Function Calling in LLM https://medium.com/@danushidk507/function-calling-in-llm-e537b286a4fd
+  - MCP:
+    - https://theneuralmaze.substack.com/p/how-we-built-an-mcp-agent-from-scratch
+    - https://github.com/PrefectHQ/fastmcp
+  - Google Search with LLM:
+    - https://huggingface.co/blog/nand-tmp/google-search-with-llm
+    - https://blog.nextideatech.com/how-to-use-google-search-with-langchain-openai/
+    - https://medium.com/@reynxzz/rag-with-gemini-google-search-and-bq-vector-search-for-content-personalization-08fe7dab6b33
+    - https://newspaper.readthedocs.io/en/latest/
+    - https://github.com/AstraBert/PrAIvateSearch
+- System level safety:
+  - https://huggingface.co/meta-llama/Llama-Guard-3-1B - https://huggingface.co/tensorblock/Llama-Guard-3-1B-GGUF
+    - Llama Guard 3-1B is a fine-tuned Llama-3.2-1B pretrained model for content safety classification.
+  - https://huggingface.co/meta-llama/Llama-Guard-3-8B
+    - Llama Guard 3-8B is a fine-tuned Llama-3.1-8B pretrained model for content safety classification.
+  - https://huggingface.co/meta-llama/Llama-Guard-3-11B-Vision
+    - Llama Guard 3 Vision is a Llama-3.2-11B pretrained model, fine-tuned for content safety classification.
+- Experiment Multimodal LLMs:
+  - `Llama 3.2 Vision 11B` (is currently not supported by `llama.cpp` https://github.com/ggerganov/llama.cpp/issues/9643) requires least `8GB` of `VRAM`, and the `90B` model requires at least `64GB` of `VRAM`.
+  - Take also a look here: https://huggingface.co/unsloth
+  - [Jina-VLM: Small Multilingual Vision Language Model](https://jina.ai/news/jina-vlm-small-multilingual-vision-language-model/)
+- Explore long term memory:
+  - https://help.openai.com/en/articles/8590148-memory-faq
+  - https://ai.gopubby.com/long-term-memory-for-agentic-ai-systems-4ae9b37c6c0f
+  - Tools:
+    - https://github.com/mem0ai/mem0
+      - Explore also the structure of the repo https://github.com/mem0ai/mem0/tree/main/mem0 and the vector store implementation.
+      - https://github.com/supermemoryai/supermemory
+    - https://github.com/timescale/pgai - PostgreSQL extension for AI.
+    - https://github.com/letta-ai/letta
+- Investigate llama.cpp:
+  - server:
+    - https://github.com/ggml-org/llama.cpp/tree/master/tools/server
+  - webui:
+    - https://github.com/ggml-org/llama.cpp/discussions/16938
+    - https://github.com/ggml-org/llama.cpp/tree/master/tools/server/webui
+- Investigate Chroma batch querying: https://github.com/langchain-ai/langchain/blob/907c758d67764385828c8abad14a3e64cf44d05b/libs/community/langchain_community/vectorstores/chroma.py#L42
+- Make docker containers.
